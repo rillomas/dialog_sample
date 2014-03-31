@@ -1,0 +1,7 @@
+name: dialog_sample
+dependencies:
+  polymer: any
+transformers:
+- polymer:
+    entry_points:
+    - web/index.html

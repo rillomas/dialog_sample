@@ -1,0 +1,22 @@
+<polymer-element name="main-app">
+  <template>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container">
+        <a class="navbar-brand" href="#">Dialog Sample</a>
+      </div>
+    </nav>
+
+    <dialog id="sampleDialog">
+      <h3>Info</h3>
+      <p>This is a Sample Dialog</p>
+      <div>
+        <button class="btn btn-primary" on-click="{{closeDialog}}">OK</button>
+      </div>
+    </dialog>
+    
+    <div class="container">
+      <button class="btn btn-primary" on-click="{{openDialog}}">Open Dialog</button>
+    </div>
+  </template>
+  <script type="application/dart" src="main_app.dart"></script>
+</polymer-element>
