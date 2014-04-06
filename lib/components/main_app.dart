@@ -19,10 +19,8 @@ class MainApp extends PolymerElement {
     _dialog = shadowRoot.querySelector("#sampleDialog");
     if (_dialog is UnknownElement) {
       print("<dialog> not supported on this browser. Applying polyfill");
-      var dialog = shadowRoot.querySelector("dialog");
       var pf = context['dialogPolyfill'];
-      pf.callMethod('registerDialog',[dialog]);
-      _dialog = dialog;
+      pf.callMethod('registerDialog',[_dialog]);
     }
     _dialog.on["close"].listen((data) {
       print("Dialog closed");
